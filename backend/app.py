@@ -1,21 +1,35 @@
 from flask import Flask, jsonify
 import mysql.connector
-from flask_cors import CORS  # Thêm dòng này để sử dụng CORS
+import os
+from dotenv import load_dotenv
+from flask_cors import CORS  
 
 app = Flask(__name__)
 CORS(app)  # Cho phép tất cả các domain gọi API của bạn
+load_dotenv()
 
 # Kết nối với cơ sở dữ liệu MySQL
 def get_db_connection():
+    # Kiểm tra giá trị biến môi trường
+    host = os.getenv("MYSQL_HOST")
+    port = int(os.getenv("MYSQL_PORT"))
+    user = os.getenv("MYSQL_USER")
+    password = os.getenv("MYSQL_PASSWORD")
+    database = os.getenv("MYSQL_DATABASE")
+
+    print(f"Connecting to database at {host}:{port} with user {user}")
+    
+    # Kết nối tới cơ sở dữ liệu
     connection = mysql.connector.connect(
-        host=os.getenv("MYSQL_HOST"),
-        port=int(os.getenv("MYSQL_PORT")),
-        user=os.getenv("MYSQL_USER"),
-        password=os.getenv("MYSQL_PASSWORD"),
-        database=os.getenv("MYSQL_DATABASE"),
-        ssl_disabled=False
+        host=host,
+        port=port,
+        user=user,
+        password=password,
+        database=database,
+        ssl_disabled=False  # Hoặc thử thay False bằng True nếu cần
     )
     return connection
+
 
 @app.route('/get_products/<string:category>', methods=['GET'])
 def get_products_by_category(category):
