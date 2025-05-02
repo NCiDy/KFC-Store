@@ -45,35 +45,48 @@ body {
     grid-template-columns: repeat(4, 1fr); /* Chia thành 4 cột */
     margin-left: 100px;
     gap: 20px;
-    margin-right: 100px;
-    /* height: 1500px; */
-    
-
+    margin-right: 100px; 
   }
   
-  .combo-card {
+ .combo-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     font-size: 25px;
-  }
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng */
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+}
   
   .combo-card img {
     height: 400px;
     width: 400px;
     object-fit: contain;
     margin-bottom: 12px;
-    margin-left: 1cqw;
+    margin-left: 3.5cqw;
   }
   
-  .combo-price {
-    color: #e4002b;
+  .gia {
+    color: #fff;
     font-weight: bold;
-    margin: 6px 0;
-    font-size: 25px;
-    display: flex;
-  }
+    font-size: 30px;
+    padding: 12px 30px;
+    background-color: #e4002b;
+    border-radius: 50px; /* Bo tròn */
+    border: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gia:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Tăng hiệu ứng bóng đổ khi hover */
+}
+
+
+
   
   .combo-desc {
     font-size: 0.9rem;
