@@ -1,0 +1,109 @@
+.hero {
+  position: relative; /* cần thiết để overlay định vị theo hero */
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 60px;
+  font-family: 'Times New Roman', Times, serif;
+  overflow: hidden;
+}
+
+.hero p {
+  margin: 0;
+}
+.banner-mask {
+  position: absolute;
+  left: 0;
+  top: 230px;
+  width: 100%;
+  height: 250px;
+  background: white; /* màu nền che ảnh ngoài */
+  z-index: 10;
+  pointer-events: none; /* không chặn tương tác */
+}
+.top-mask {
+  top: 1000px;
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+.bottom-mask {
+  bottom: 0;
+  clip-path: ellipse(70% 100% at 50% 0%);
+}
+.banners-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 60px;
+  padding: 40px 20px;
+  cursor: grab;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+.banners-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.banners-scroll img {
+  width: 650px;
+  flex-shrink: 0;
+  margin-top: 30px;
+}
+
+.banners-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  clip-path: ellipse(90% 60% at 50% 50%);
+  -webkit-clip-path: ellipse(90% 60% at 50% 50%);
+}
+
+
+.order-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.order-btn{
+  width: 350px;
+  height: 70px;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 85px;
+}
+.batdaudathang{
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -250px;
+  width: 15%;
+  height: auto;
+  z-index: 1000; 
+  pointer-events: none; 
+}
+
+.gocphaiphu,
+.gocphai {
+  position: absolute; 
+  right: 0;
+  transform: rotate(-30deg); 
+  z-index: 10; 
+}
+
+.gocphaiphu {
+  bottom: -270px;
+  right: 310px;
+  width: 300px;
+}
+
+.gocphai {
+  bottom: -330px;
+  right: -45px;
+}
