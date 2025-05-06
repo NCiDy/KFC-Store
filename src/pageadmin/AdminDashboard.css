@@ -1,0 +1,170 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    position: relative;
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .kfc{
+    font-size: 50px;
+  }
+  .kfc-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    padding: 10px 12px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+  
+  .menu-item:hover,
+  .menu-item.active {
+    background-color: #e0edff;
+    color: #0066cc;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 24px;
+    background: #f5f6f8;
+    overflow-y: auto;
+  }
+  
+  .cl-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    all: unset; /* Xóa toàn bộ style mặc định của trình duyệt */
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 8px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .tab.selected {
+    background: #dbe9ff;
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .stats-grid,
+  .sub-stats-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .sub-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .stat-box {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stat-box .label {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .stat-box .value {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .chart-placeholder {
+    background: #cfe2ff;
+    height: 200px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+
+  .chart-placeholder {
+    background-color: #f9f9f9;
+    height: 200px;
+    border: 2px dashed #ccc;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+  
+  .menu-item.logout {
+    position: absolute;
+    bottom: 70px;  /* cách đáy 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item.logout:hover {
+    background-color: #d32f2f;
+  }

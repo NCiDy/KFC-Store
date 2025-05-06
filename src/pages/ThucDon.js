@@ -84,24 +84,19 @@ export default function ThucDon() {
     }, [location.state]);
 
     useEffect(() => {
-        // Lấy mã danh mục từ ánh xạ categoryMap
         const categoryCode = categoryMap[activeTab];
-
-        // Gọi API để lấy sản phẩm theo ma_danh_muc
         fetch(`http://localhost:5000/get_products/${categoryCode}`)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data); // Kiểm tra dữ liệu trả về từ API
+                console.log(data); 
             
                 const formattedCombos = data.map((product) => {
-                    const imageName = product.hinh_anh.split('/').pop(); // Lấy tên file, ví dụ: combo1.png
-                    console.log("🖼️ Tên file hình ảnh:", imageName);
-                
+                    const imageName = product.hinh_anh.split('/').pop(); 
                     return {
                         name: product.ten_san_pham,
                         price: `${product.gia}`,
                         desc: product.mo_ta,
-                        img: imageMap[imageName] || product.hinh_anh || defaultImage, // Ưu tiên ảnh nội bộ, sau đó là ảnh URL
+                        img: imageMap[imageName] || product.hinh_anh || defaultImage, 
                     };
                 });
             

@@ -9,21 +9,26 @@ import Footer from "./components/Footer";
 import DangNhap from "./login/DangNhap";
 import DangNhapAD from "./login/DangNhapAD";
 import DangKy from "./login/DangKy";
+import Admin from "./pageadmin/AdminDashboard";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<TrangChu />} />
-        <Route path="/ThucDon" element={<ThucDon />} />
-        <Route path="/DichVu" element={<DichVu />} />
-        <Route path="/HeThong" element={<HeThong />} />
+        {/* Các Route thông thường với Navbar và Footer */}
+        <Route path="/" element={<><Navbar /><TrangChu /><Footer /></>} />
+        <Route path="/ThucDon" element={<><Navbar /><ThucDon /><Footer /></>} />
+        <Route path="/DichVu" element={<><Navbar /><DichVu /><Footer /></>} />
+        <Route path="/HeThong" element={<><Navbar /><HeThong /><Footer /></>} />
         <Route path="/DangNhap" element={<DangNhap />} />
         <Route path="/DangNhapAD" element={<DangNhapAD />} />
         <Route path="/DangKy" element={<DangKy />} />
+        <Route path="/GioHang" element={<><Navbar /><Cart /><Footer /></>} />
+        
+        {/* Trang Admin không có Navbar và Footer */}
+        <Route path="/AdminDashboard" element={<Admin />} />
       </Routes>
-      <Footer/>
     </Router>
   );
 }

@@ -1,0 +1,48 @@
+.om-container {
+  padding: 24px;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+}
+
+.om-container h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.om-search-input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.om-order-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.om-table-header,
+.om-table-cell {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 22px;
+}
+
+.om-table-header {
+  background-color: #f5f5f5;
+}
+
+.om-status-select {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 22px;
+}

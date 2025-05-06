@@ -1,0 +1,119 @@
+.menu-list-container {
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* Thanh tìm kiếm */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    padding: 3px 10px;
+    margin-bottom: 10px; 
+    margin-left: 1150px;
+  }
+  
+  
+  .search-icon {
+    margin-right: 8px;
+    font-size: 35px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 23px;
+  }
+  
+  /* Các nút danh mục */
+  .category-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .category-btn {
+    background-color: #d80000;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .category-btn:hover,
+  .category-btn.active {
+    background-color: #a50000;
+  }
+  
+  /* Danh sách sản phẩm */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 40px;
+  }
+  
+  .product-card {
+    background-color: #fff5f5;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .product-info h4 {
+    margin: 0 0 5px;
+    font-size: 22px;
+    color: #333;
+  }
+  strong{
+    font-size: 23px;
+  }
+  
+  .product-info p {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .product-info strong {
+    color: #d80000;
+  }
+  .product-image {
+    position: relative;
+    width: 160px;            
+    height: 160px;
+    flex-shrink: 0;
+  }
+  
+  .product-img {
+    width: 160px;    
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .add-btn {
+    position: absolute;   
+    bottom: 10px;
+    right: 10px;
+    background-color: #d80000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 29px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
