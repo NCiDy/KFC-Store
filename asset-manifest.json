@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KFC-Store/static/css/main.bc89418d.css",
-    "main.js": "/KFC-Store/static/js/main.4169d6ff.js",
+    "main.css": "/KFC-Store/static/css/main.37226b75.css",
+    "main.js": "/KFC-Store/static/js/main.7ad24c70.js",
     "static/media/miy.png": "/KFC-Store/static/media/miy.b4786d57b65269313251.png",
     "static/media/gocphai.png": "/KFC-Store/static/media/gocphai.7812224e8f1dd066e124.png",
     "static/media/combo.png": "/KFC-Store/static/media/combo.60e49a6246f26124c232.png",
@@ -23,6 +23,7 @@
     "static/media/batdaudathang.png": "/KFC-Store/static/media/batdaudathang.655ea418e548cc1d91de.png",
     "static/media/lipton.png": "/KFC-Store/static/media/lipton.15a7a9aaaca4f8b99218.png",
     "static/media/bg-left.png": "/KFC-Store/static/media/bg-left.bcff1e56411a06164feb.png",
+    "static/media/visa.png": "/KFC-Store/static/media/visa.3349efc4559d0cb05bee.png",
     "static/media/banner1.png": "/KFC-Store/static/media/banner1.9519127d443ed52b6315.png",
     "static/media/pepsivua.png": "/KFC-Store/static/media/pepsivua.c00bc61c67e7015bf32b.png",
     "static/media/banner5.png": "/KFC-Store/static/media/banner5.8cd816c2e1ad3f90773d.png",
@@ -41,17 +42,19 @@
     "static/media/comga.png": "/KFC-Store/static/media/comga.dd9f545689e4f2ef2fca.png",
     "static/media/gquay3.png": "/KFC-Store/static/media/gquay3.f5853bc873d02b56614e.png",
     "static/media/account.png": "/KFC-Store/static/media/account.e7164f836687251c59f2.png",
+    "static/media/master.png": "/KFC-Store/static/media/master.cdeb316623f2ec0e191f.png",
+    "static/media/rupay.png": "/KFC-Store/static/media/rupay.5779ef701ddb55330409.png",
     "static/media/giohang.png": "/KFC-Store/static/media/giohang.1af9be4b5b75bf3d0345.png",
     "static/media/download.png": "/KFC-Store/static/media/download.027f2ea76329bd5e669e.png",
     "static/media/party-hat.png": "/KFC-Store/static/media/party-hat.d41ed34a223fead56ffb.png",
     "static/media/decor.png": "/KFC-Store/static/media/decor.fe4cfae610354dc21ead.png",
     "static/media/gift.png": "/KFC-Store/static/media/gift.05c71abdd44c29aba83f.png",
     "index.html": "/KFC-Store/index.html",
-    "main.bc89418d.css.map": "/KFC-Store/static/css/main.bc89418d.css.map",
-    "main.4169d6ff.js.map": "/KFC-Store/static/js/main.4169d6ff.js.map"
+    "main.37226b75.css.map": "/KFC-Store/static/css/main.37226b75.css.map",
+    "main.7ad24c70.js.map": "/KFC-Store/static/js/main.7ad24c70.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc89418d.css",
-    "static/js/main.4169d6ff.js"
+    "static/css/main.37226b75.css",
+    "static/js/main.7ad24c70.js"
   ]
 }
