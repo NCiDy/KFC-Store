@@ -5,12 +5,27 @@ import logoKFC from "../assets/logo.png";
 import googleIcon from "../assets/google-icon.png";
 import appleIcon from "../assets/apple-icon.png";
 import MixAccount from "../assets/mixaccount.png";
+import Kfc_login from "../assets/kfc-login.png";
+import sale_login from "../assets/sale_lg.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const DangNhap = () => {
   const [email, setEmail] = useState("");
   const [matKhau, setMatKhau] = useState("");
-  const navigate = useNavigate();  // Dùng useNavigate thay vì useHistory
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email.trim() || !matKhau.trim()) {
+      setError('Vui lòng nhập email và mật khẩu');
+    } else {
+      setError('');
+      console.log('Email:', email);
+      console.log('Mật khẩu:', matKhau);
+    }
+  };
 
   const handleLogin = async () => {
     try {
@@ -44,12 +59,14 @@ const DangNhap = () => {
       <div className="dangnhap-wrapper">
         <div className="dangnhap-left">
           <img src={bgLeft} alt="promo" className="dangnhap-bg" />
+          <img src={Kfc_login} alt="KFC_Login" className="KFC_login" />
         </div>
         <div className="dangnhap-right">
           <Link to="/DangNhapAD" className="link-mix-bg">
             <img src={MixAccount} alt="Mix" className="Mix-bg" />
           </Link>
           <h2>WELCOME TO KFC</h2>
+          <form onSubmit={handleSubmit} className="form-lg">
           <div className="input-group">
             <label>Email</label>
             <input
@@ -68,7 +85,9 @@ const DangNhap = () => {
               placeholder="Nhập mật khẩu"
             />
           </div>
+           {error && <p style={{ color: 'red', marginLeft: '330px' }}>{error}</p>}
           <button className="btn-signin" onClick={handleLogin}>Sign in</button>
+          </form>
           <div className="or-divider">OR</div>
           <div className="social-login">
             <img src={googleIcon} alt="Google" />
@@ -81,6 +100,7 @@ const DangNhap = () => {
           </p>
         </div>
       </div>
+            <img src={sale_login} alt="sale_login" className="sale_login" />
     </div>
   );
 };

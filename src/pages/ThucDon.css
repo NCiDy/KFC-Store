@@ -34,10 +34,11 @@ body {
   }
   
   .combo-title {
-    font-size: 1.25rem;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 16px;
     margin-left: 100px;
+    color: #000000;
   }
   
   .combo-grid {
@@ -67,25 +68,12 @@ body {
   }
   
   .gia {
-    color: #fff;
+    color: #000000;
     font-weight: bold;
-    font-size: 30px;
-    padding: 12px 30px;
-    background-color: #e4002b;
-    border-radius: 50px; /* Bo tròn */
-    border: none;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 25px;
+    text-align: right;
+    margin-top: -60px;
 }
-
-.gia:hover {
-    transform: scale(1.1); /* Phóng to khi hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Tăng hiệu ứng bóng đổ khi hover */
-}
-
-
 
   
   .combo-desc {
@@ -94,17 +82,18 @@ body {
     font-size: 20px;
   }
   
-  .add-button {
-    background-color: #f2f2f2;
+  .add-button1 {
+    background-color: #c3c0c0;
     border: none;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     font-size: 30px;
-    width: 200px;
+    width: 310px;
     height: 70px;
-    margin-left: 200px;
+    margin-left: 140px;
     margin-top: 50px;
+    color: #ffffff;
   }
   

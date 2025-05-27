@@ -58,9 +58,9 @@ def dangnhap():
             session['user_id'] = user['id']
             session['ho_ten'] = user['ho_ten']
             print(">>> Session set:", dict(session)) 
-            return jsonify({"message": "Login successful", "redirect": "/"})
+            return jsonify({"message": "Đăng nhập thành công", "redirect": "/"})
         else:
-            return jsonify({"error": "Invalid credentials"}), 401
+            return jsonify({"error": "Đăng nhập không thành công"}), 401
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500

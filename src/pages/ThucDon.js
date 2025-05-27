@@ -131,7 +131,7 @@ export default function ThucDon() {
                             <h3>{combo.name}</h3>
                             <p className="gia">{combo.price}</p>
                             <p className="combo-desc">{combo.desc}</p>
-                            <button className="add-button">Thêm</button>
+                            <button className="add-button1">Thêm</button>
                         </div>
                     ))}
                 </div>

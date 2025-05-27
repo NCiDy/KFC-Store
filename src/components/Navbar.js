@@ -84,7 +84,7 @@ export default function Navbar() {
       <div className="icons">
         {userName ? (
            <div className="user-dropdown">
-           <span className="user-name" onClick={() => setShowDropdown(!showDropdown)}>
+           <span className="user-name1" onClick={() => setShowDropdown(!showDropdown)}>
              {userName} <span className="arrow-down">▼</span>
            </span>
            {showDropdown && (

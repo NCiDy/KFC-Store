@@ -97,7 +97,12 @@ const CustomerList = () => {
                 <td className="cl-table-cell">{cust.email}</td>
                 <td className="cl-table-cell">{cust.dateTime}</td>
                 <td className="cl-table-cell">
-                    <button className="cl-btn-view">View</button>
+                    <button
+                        className="cl-btn-view"
+                        onClick={() => window.location.href = '/Capnhatthongtin'}
+                      >
+                        View
+                    </button>
                     <button className="cl-btn-deactivate" onClick={() => handleDeactivate(cust.id)}>
                       {cust.trangthai === 'Ngưng hoạt động' ? 'Activate' : 'Deactivate'}
                   </button>

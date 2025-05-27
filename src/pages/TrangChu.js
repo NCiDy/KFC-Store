@@ -111,7 +111,7 @@ export default function TrangChu() {
         <img src={batdaudathang} alt="batdaudathang" className="batdaudathang"/>
         <div className="banner-mask top-mask"></div>
         <div className="banner-mask bottom-mask"></div>
-        <button className="order-btn">Bắt đầu đặt hàng</button>
+        <button className="order-btn1">Bắt đầu đặt hàng</button>
       </section>
       <img src={gocphaiphu} alt="gocphaiphu" className="gocphaiphu"/>
       <img src={gocphai} alt="gocphai" className="gocphai"/>

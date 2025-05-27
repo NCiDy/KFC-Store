@@ -11,6 +11,9 @@ import DangNhapAD from "./login/DangNhapAD";
 import DangKy from "./login/DangKy";
 import Admin from "./pageadmin/AdminDashboard";
 import Cart from "./pages/Cart";
+import InventoryView from "./pageadmin/InventoryView";
+import ThuNgan from "./pageadmin/ThuNgan";
+import CapNhatThongTin from "./pages/CapNhatThongTin";
 
 function App() {
   return (
@@ -25,9 +28,12 @@ function App() {
         <Route path="/DangNhapAD" element={<DangNhapAD />} />
         <Route path="/DangKy" element={<DangKy />} />
         <Route path="/GioHang" element={<><Navbar /><Cart /><Footer /></>} />
+        <Route path="/CapNhatThongTin" element={<CapNhatThongTin />} />
         
         {/* Trang Admin không có Navbar và Footer */}
         <Route path="/AdminDashboard" element={<Admin />} />
+        <Route path="/InventoryView" element={<InventoryView />} />
+        <Route path="/ThuNgan" element={<ThuNgan />} />
       </Routes>
     </Router>
   );

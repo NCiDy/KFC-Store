@@ -1,0 +1,92 @@
+.inventory-container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.title {
+  color: red;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 30px;
+}
+
+.add-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.inventory-table thead {
+  background-color: #eafaf0;
+}
+
+.warning-row {
+  background-color: #fff0f0;
+}
+
+.warning-text .red {
+  color: red;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 25px;
+  height: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.order-btn {
+  background-color: #fbc02d;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 25px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

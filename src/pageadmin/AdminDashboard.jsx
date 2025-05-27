@@ -6,6 +6,7 @@ import CustomerList from './CustomerList';
 import EmployeesList from './EmployeesList'; 
 import MenuList from './MenuList';
 import OrderManager from './OrderManager';
+import InventoryView from './InventoryView';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, ResponsiveContainer
 } from 'recharts';
@@ -16,8 +17,8 @@ const AdminDashboard = () => {
   const [selectedTab, setSelectedTab] = useState('Hôm nay');
 
   const tabs = ['Hôm nay', 'Hôm qua', 'Tuần', 'Tháng'];
-  const menuIcons = ['📊', '👥', '🧾', '🍔', '🧑‍💼'];
-  const menuItems = ['Tổng quan', 'Khách hàng', 'Đơn hàng', 'Thực đơn', 'Nhân viên'];
+  const menuIcons = ['📊', '👥', '🧾', '🍔', '🧑‍💼', '📦'];
+  const menuItems = ['Tổng quan', 'Khách hàng', 'Đơn hàng', 'Thực đơn', 'Nhân viên', 'Kho hàng'];
 
   // Dummy chart data
   const chartDataToday = [
@@ -178,6 +179,7 @@ const AdminDashboard = () => {
         {selectedMenu === 'Nhân viên' && <EmployeesList />}
         {selectedMenu === 'Thực đơn' && <MenuList />}
         {selectedMenu === 'Đơn hàng' && <OrderManager />}
+        {selectedMenu === 'Kho hàng' && <InventoryView />}
 
         {selectedMenu !== 'Tổng quan' && !menuItems.includes(selectedMenu) && (
           <div className="placeholder">

@@ -61,7 +61,6 @@ const MenuList = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [products, setProducts] = useState([]);
 
-  // Function to fetch all products
   const fetchAllProducts = () => {
     fetch("http://localhost:5000/get_products")
       .then((response) => response.json())
@@ -76,7 +75,6 @@ const MenuList = () => {
       .catch((error) => console.error('Error:', error));
   };
 
-  // Function to fetch products based on category
   const fetchProductsByCategory = (category) => {
     fetch(`http://localhost:5000/get_products/${category}`)
       .then((response) => response.json())
@@ -92,7 +90,6 @@ const MenuList = () => {
   };
 
   useEffect(() => {
-    // Load all products when the component mounts
     fetchAllProducts();
   }, []);
 
@@ -100,7 +97,7 @@ const MenuList = () => {
     if (selectedCategory) {
       fetchProductsByCategory(selectedCategory);
     } else {
-      fetchAllProducts(); // Load all products when no category is selected
+      fetchAllProducts(); 
     }
   }, [selectedCategory]);
 
@@ -128,7 +125,7 @@ const MenuList = () => {
             key={cat.id}
             className={`category-btn ${selectedCategory === cat.id ? 'active' : ''}`}
             onClick={() => {
-              setSelectedCategory(cat.id);  // Fetch products when category changes
+              setSelectedCategory(cat.id);  
             }}
           >
             {cat.name}
@@ -139,9 +136,7 @@ const MenuList = () => {
       {/* Sản phẩm */}
       <div className="product-grid">
         {filteredProducts.map((product) => {
-          // Cắt chuỗi để lấy tên ảnh
           const imageName = product.hinh_anh ? product.hinh_anh.split('/').pop() : null;
-   
           return (
             <div className="product-card" key={product.id}>
               <div className="product-info">
